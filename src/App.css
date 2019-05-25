@@ -1,33 +1,150 @@
-.App {
+html,
+body {
+  background-color: black;
+  height: 100%;
+}
+
+.status {
+  margin: 0px 30% 10px;
+  padding: 30px 0 0 0;
+  padding: 1% 0.5%;
+}
+
+.barp1 {
+  padding: 2px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, orange, red);
+}
+
+.barp2 {
+  padding: 2px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, violet, purple);
+}
+
+.para {
+  margin: 2%;
+  padding: 0px;
+  font-size: 30px;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.board {
+  margin: 0% 25% 0%;
+  background-color: rgb(35, 68, 180);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border: 5px solid rgb(32, 50, 107);
+  border-radius: 20px 20px 0 0;
+  padding: 2%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.coin {
+  display: inline-block;
+  border-radius: 100%;
+  padding: 1% 0px;
+  width: 12.257%;
+  padding-top: 11.4%;
+  background-color: rgb(25, 25, 32);
+  box-shadow: 0px 0px 0.5em 0.1em white inset;
+}
+
+.coin:hover {
+  background-color: rgba(0, 0, 139, 0.342);
+}
+
+.coinOrange {
+  box-shadow: 0px 0px 20px black inset;
+  display: inline-block;
+
+  border-radius: 100%;
+  padding: 1% 0px;
+  width: 12.257%;
+  padding-top: 11.4%;
+  background-color: orange;
+}
+.coinBlue {
+  box-shadow: 0px 0px 20px rgb(43, 0, 78) inset;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 1% 0px;
+  width: 12.257%;
+  padding-top: 11.4%;
+  background-color: purple;
+}
+
+.coinContainer {
+  display: inline;
+  padding: 1%;
+}
+
+.buttonContainer {
+  text-align: center;
+  margin: 7px 30px;
+}
+
+.resetButton {
+  background-color: rgb(218, 123, 0);
+  padding: 1% 5%;
+  border: 0;
+  color: black;
+}
+
+.resetButton:hover {
+  box-shadow: 0 0 10px 1px white;
+  color: white;
+}
+
+.p1won {
+  box-shadow: 0px 0px 20px 1px black inset;
+  height: 10%;
+  width: 10%;
+  padding-top: 10%;
+  background-color: orange;
+  border-radius: 100%;
+  animation: rotate 2s infinite;
+}
+
+.p2won {
+  box-shadow: 0px 0px 20px black inset;
+  width: 10%;
+  padding-top: 10%;
+  background-color: purple;
+  border-radius: 100%;
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: rotateY(360deg);
+  }
+}
+
+@media (max-aspect-ratio: 15/10) {
+  .para {
+    font-size: 4vw;
+  }
+  .p1won {
+    width: 15%;
+    padding-top: 15%;
+  }
+  .p2won {
+    width: 15%;
+    padding-top: 15%;
+  }
+  .board {
+    margin: 0 0%;
+  }
+
+  .status {
+    margin: 0 10% 10px;
   }
 }
